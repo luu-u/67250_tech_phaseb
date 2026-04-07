@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/tickets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <a href="../index.html"><img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="400"></a>
+        <!-- <h1>Buy Tickets</h1> -->
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Visit Us</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="membership.html">Membership</a>
+        <a href="tickets.html" class="cta">Buy Tickets</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <main class="main">
+
+        <div class="tables-row">
+            <!-- Ticket Pricing -->
+            <section class="ticket-section">
+                <h2>Admission Prices</h2>
+                <p>Inquiry about Membership please contact costumer service.</p>
+
+                <table>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>General price</th>
+                        <th>Member Price</th>
+                    </tr>
+                    <tr>
+                        <td>General (18+)</td>
+                        <td>$20</td>
+                        <td>$16</td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>$14</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Senior (65+)</td>
+                        <td>$14</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Age (under 3)</td>
+                        <td>Free</td>
+                        <td>Free</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Monthly Calendar -->
+            <section class="ticket-section">
+                <h2>Schedule</h2>
+                <p>Select an available date below to begin your purchase.</p>
+
+                <table id="scheduleTable"></table>
+            </section>
+
+        </div>
+
+        <!-- Purchase Form (hidden by default via CSS) -->
+        <section id="purchaseFormSection" class="purchase-form-section">
+            <h2>Purchase Tickets</h2>
+            <p id="selectedDateDisplay" class="selected-date-display"></p>
+
+            <div class="form-wrapper">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required-star">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Jane Smith">
+                    <span class="error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required-star">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com">
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ticketType">Ticket Type <span class="required-star">*</span></label>
+                    <select id="ticketType" name="ticketType" onchange="updatePrice()">
+                        <option value="">— Select a ticket type —</option>
+                        <option value="general">General — $20</option>
+                        <option value="student">Student — $14</option>
+                        <option value="senior">Senior — $14</option>
+                    </select>
+                    <span class="error-msg" id="ticketTypeError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="isMember" name="isMember" onchange="updatePrice()">
+                        I am a member
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Number of Tickets (1–10) <span class="required-star">*</span></label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" onchange="updatePrice()" oninput="updatePrice()">
+                    <span class="error-msg" id="quantityError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalPrice">Total Price</label>
+                    <input type="text" id="totalPrice" name="totalPrice" value="$0.00" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCode">Zip Code (optional)</label>
+                    <input type="text" id="zipCode" name="zipCode" placeholder="e.g. 15213" maxlength="5">
+                    <span class="error-msg" id="zipCodeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="selectedDate">Selected Date</label>
+                    <input type="text" id="selectedDate" name="selectedDate" readonly>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="mailingList" name="mailingList">
+                        Join our mailing list
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" class="submit-btn" onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

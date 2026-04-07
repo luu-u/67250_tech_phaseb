@@ -1,0 +1,60 @@
+/* =========================================
+   Exhibitions Page Styles (exhibitions.html)
+   ========================================= */
+
+
+/* =========================================
+   Exhibitions Intro
+   ========================================= */
+
+.exhibitions-intro {
+  margin-bottom: 40px;
+}
+
+
+/* =========================================
+   Exhibitions Grid
+   ========================================= */
+
+.exhibitions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 30px;
+  align-items: center;
+}
+
+.exhibit-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.exhibit-image p {
+  font-size: var(--fs-xs);
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* =========================================
+   Exhibitions — Mobile Responsive
+   ========================================= */
+
+@media only screen and (max-width: 768px) {
+
+  /* Single column on mobile */
+  .exhibitions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Reorder exhibition items: text always before image */
+  .exhibitions-grid > :nth-child(1) { order: 1; }
+  .exhibitions-grid > :nth-child(2) { order: 2; }
+  .exhibitions-grid > :nth-child(3) { order: 4; }
+  .exhibitions-grid > :nth-child(4) { order: 3; }
+  .exhibitions-grid > :nth-child(5) { order: 5; }
+  .exhibitions-grid > :nth-child(6) { order: 6; }
+  .exhibitions-grid > :nth-child(7) { order: 8; }
+  .exhibitions-grid > :nth-child(8) { order: 7; }
+}

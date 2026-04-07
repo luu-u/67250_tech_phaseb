@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/exhibitions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <a href="../index.html"><img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="400"></a>
+        <!-- <h1>Exhibitions</h1> -->
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Visit Us</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="membership.html">Membership</a>
+        <a href="tickets.html" class="cta">Buy Tickets</a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <main class="main">
+
+        <div class="exhibitions-intro">
+            <h2>Current Exhibitions</h2>
+            <p>
+                Discover what's on view at MonoMuse. Our rotating exhibitions explore
+                fashion across eras, cultures, and creative visions — from classic
+                couture to the cutting edge of wearable technology. Each exhibition
+                is thoughtfully curated to spark conversation, celebrate craft, and
+                invite visitors to see clothing as more than what we wear. Whether
+                you're a lifelong fashion enthusiast or simply curious, there's
+                something new to discover with every visit.
+            </p>
+            <a href="tickets.html" class="buy-tickets-btn">Buy Tickets</a>
+        </div>
+
+        <div class="exhibitions-grid">
+
+            <!-- Row 1: Text left, Image right -->
+            <div class="exhibit-text">
+                <h2>Exhibition 1: European Elegance</h2>
+                <p><strong>On view:</strong> January 15 – May 30, 2026</p>
+                <p>
+                    European Elegance explores the foundations of high fashion, from
+                    classic couture houses to the craftsmanship that defined luxury
+                    style. The exhibition highlights intricate tailoring, rich textiles,
+                    and the cultural influence of European fashion capitals in shaping
+                    global trends.
+                </p>
+            </div>
+            <div class="exhibit-image">
+                <img src="../static/EuropeanEx.jpg" alt="European Elegance exhibition">
+                <p>Classic couture on display</p>
+            </div>
+
+            <!-- Row 2: Image left, Text right -->
+            <div class="exhibit-image">
+                <img src="../static/1990sEx.jpeg" alt="American Street Style exhibition">
+                <p>90s streetwear culture</p>
+            </div>
+            <div class="exhibit-text">
+                <h2>Exhibition 2: American Street Style (1990s)</h2>
+                <p><strong>On view:</strong> March 1 – August 15, 2026</p>
+                <p>
+                    American Street Style examines the bold, expressive fashion of the
+                    1990s, where hip-hop, grunge, and youth culture redefined style.
+                    Featuring oversized silhouettes, denim, and iconic streetwear, the
+                    exhibition captures a decade where fashion became a powerful form
+                    of identity and rebellion.
+                </p>
+            </div>
+
+            <!-- Row 3: Text left, Image right -->
+            <div class="exhibit-text">
+                <h2>Exhibition 3: Contemporary Voices</h2>
+                <p><strong>On view:</strong> April 10 – September 28, 2026</p>
+                <p>
+                    Contemporary Voices showcases modern designers who are redefining
+                    fashion today. Through experimental silhouettes, sustainable
+                    materials, and diverse perspectives, this exhibition highlights how
+                    fashion continues to evolve as both art and social commentary.
+                </p>
+            </div>
+            <div class="exhibit-image">
+                <img src="../static/ModernEx.jpeg" alt="Contemporary Voices exhibition">
+                <p>Modern fashion as art</p>
+            </div>
+
+            <!-- Row 4: Image left, Text right -->
+            <div class="exhibit-image">
+                <img src="../static/FuturisticEx.jpg" alt="Future Fabrics exhibition">
+                <p>Technology meets textile</p>
+            </div>
+            <div class="exhibit-text">
+                <h2>Exhibition 4: Future Fabrics</h2>
+                <p><strong>On view:</strong> June 1 – November 15, 2026</p>
+                <p>
+                    Future Fabrics explores the intersection of fashion and technology.
+                    From 3D-printed garments to smart textiles and digital fashion, the
+                    exhibition presents innovative approaches that challenge how
+                    clothing is designed, produced, and experienced.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

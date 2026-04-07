@@ -1,0 +1,149 @@
+/* =========================================
+   Membership & Donate Page Styles (membership.html)
+   ========================================= */
+
+
+/* =========================================
+   Membership Intro
+   ========================================= */
+
+.membership-intro {
+  margin-bottom: 40px;
+}
+
+
+/* =========================================
+   Membership Tier Grid
+   ========================================= */
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.membership-card {
+  border: 1px solid var(--border-medium);
+  border-radius: 10px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.membership-card.selected {
+  border-color: var(--accent-gold);
+}
+
+.membership-card h3 {
+  color: var(--accent-gold);
+}
+
+.membership-price {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  color: var(--text-light) !important;
+  padding: 0 !important;
+}
+
+.membership-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.membership-card li {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.membership-card li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+}
+
+
+/* =========================================
+   Join + Donate Side-by-Side Row
+   ========================================= */
+
+.membership-actions-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.membership-form-section {
+  flex: 1;
+}
+
+
+/* =========================================
+   Donation Section
+   ========================================= */
+
+.donation-section {
+  flex: 1;
+}
+
+.donation-options {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0 30px;
+}
+
+.donation-btn {
+  padding: 12px 28px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid var(--border-medium);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.donation-btn:hover,
+.donation-btn.selected {
+  background-color: var(--accent-gold);
+  color: var(--bg-dark);
+  border-color: var(--accent-gold);
+}
+
+
+/* =========================================
+   Membership — Mobile Responsive
+   ========================================= */
+
+@media only screen and (max-width: 768px) {
+
+  /* Single column on mobile */
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack join + donate vertically */
+  .membership-actions-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .donation-options {
+    flex-wrap: wrap;
+  }
+}
