@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | MonoMuse</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container explore-layout">
+
+    <header class="header">
+        <img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="500">
+        <!-- <h1>Explore</h1> -->
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <main class="main">
+        <div class="explore-content">
+            <h3>Mission Statement</h3>
+            <p>
+                MonoMuse is a contemporary fashion museum dedicated to exploring
+                the art, history, and future of clothing. Blending design, culture,
+                and technology, MonoMuse showcases how fashion shapes identity,
+                challenges norms, and reflects the world around us.
+            </p>
+
+            <h3>Milestones:</strong></h3>
+            <ul>
+                <li>2018: Museum founded</li>
+                <li>2019: First digital interactive exhibition launched</li>
+                <li>2022: Expanded gallery space</li>
+                <li>2025: Over 100,000 annual visitors</li>
+            </ul>
+            <h3>Visit Us</h3>
+            <p>Find MonoMuse on the map below.</p>
+            <div id="map"></div>
+        </div>
+
+        <figure class="main_figure">
+            <img src="../static/museumPicHolder.jpg" alt="Museum Pic Holder" width="700">
+        </figure>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

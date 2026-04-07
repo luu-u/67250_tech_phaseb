@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="500">
+        <!-- <h1>Buy Tickets</h1> -->
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html" class="cta">Buy Tickets</a>
+    </nav>
+
+    <main class="main">
+
+        <div class="tables-row">
+            <!-- Ticket Pricing -->
+            <section class="ticket-section">
+                <h2>Admission Prices</h2>
+                <p>Inquiry about Membership please contact costumer service.</p>
+
+                <table>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>General price</th>
+                        <th>Member Price</th>
+                    </tr>
+                    <tr>
+                        <td>General (age 18+)</td>
+                        <td>$20</td>
+                        <td>$16</td>
+                    </tr>
+                    <tr>
+                        <td>Student (Need Valied ID)</td>
+                        <td>$14</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Senior age 65+</td>
+                        <td>$14</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Age under 3</td>
+                        <td>Free</td>
+                        <td>Free</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Monthly Schedule -->
+            <section class="ticket-section">
+                <h2>April Schedule</h2>
+                <p>Select an available date below to begin your purchase.</p>
+
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Hours</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>April 5, 2025</td>
+                        <td>Saturday</td>
+                        <td>10:00 AM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 5, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 6, 2025</td>
+                        <td>Sunday</td>
+                        <td>12:00 PM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 6, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 12, 2025</td>
+                        <td>Saturday</td>
+                        <td>10:00 AM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 12, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 13, 2025</td>
+                        <td>Sunday</td>
+                        <td>12:00 PM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 13, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 19, 2025</td>
+                        <td>Saturday</td>
+                        <td>10:00 AM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 19, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 20, 2025</td>
+                        <td>Sunday</td>
+                        <td>12:00 PM – 5:00 PM</td>
+                        <td>Sold Out</td>
+                        <td><button class="buy-btn sold-out-btn" disabled>Sold Out</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 26, 2025</td>
+                        <td>Saturday</td>
+                        <td>10:00 AM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 26, 2025')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 27, 2025</td>
+                        <td>Sunday</td>
+                        <td>12:00 PM – 5:00 PM</td>
+                        <td>Available</td>
+                        <td><button class="buy-btn" onclick="showForm('April 27, 2025')">Buy Now</button></td>
+                    </tr>
+                </table>
+            </section>
+
+        </div>
+
+        <!-- Purchase Form (hidden by default via CSS) -->
+        <section id="purchaseFormSection" class="purchase-form-section">
+            <h2>Purchase Tickets</h2>
+            <p id="selectedDateDisplay" class="selected-date-display"></p>
+
+            <div class="form-wrapper">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Smith">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="ticketType">Ticket Type</label>
+                    <select id="ticketType" name="ticketType">
+                        <option value="general">General — $20</option>
+                        <option value="student">General (Member) — $16</option>
+                        <option value="member">Student — $14</option>
+                        <option value="member">Student (Member) — $10</option>
+                        <option value="general">Senior — $14</option>
+                        <option value="student">Senior (Member) — $10</option>
+                        <option value="member">Under 3 - Free</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Number of Tickets</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="selectedDate">Selected Date</label>
+                    <input type="text" id="selectedDate" name="selectedDate" readonly>
+                </div>
+
+                <div class="form-group">
+                    <button class="submit-btn" onclick="submitForm()">Proceed to Payment</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>
