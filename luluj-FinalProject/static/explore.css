@@ -1,0 +1,118 @@
+/* Visit Us Page Styles */
+
+
+.container.explore-layout .main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.container.explore-layout .main .explore-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Info Row & Cards */
+
+.info-row {
+  display: flex;
+  gap: 30px;
+  margin: 24px 0;
+}
+
+.info-card {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid rgba(232, 230, 222, 0.15);
+  border-radius: 10px;
+}
+
+.info-card h3 {
+  color: #c9a94f;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  padding: 2px 0;
+  font-size: 14px;
+}
+
+
+/* Leaflet Map (External library: Leaflet.js — https://leafletjs.com) */
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 230, 222, 0.15);
+}
+
+/* Override universal selector for Leaflet internals */
+#map * {
+  background-color: unset;
+  color: unset;
+  border: unset;
+  font-weight: unset;
+  line-height: unset;
+  margin: unset;
+  padding: unset;
+}
+
+#map .leaflet-control-zoom a {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+#map .leaflet-control-attribution {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+#map .leaflet-popup-content-wrapper {
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+}
+
+#map .leaflet-popup-content {
+  margin: 8px 12px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+#map .leaflet-popup-tip {
+  background-color: white;
+}
+
+#map .leaflet-popup-close-button {
+  color: #999;
+  font-size: 18px;
+}
+
+
+/* Visit Us (Mobile) */
+
+@media only screen and (max-width: 768px) {
+
+  /* Explore page: stack vertically */
+  .container.explore-layout .main {
+    flex-direction: column;
+  }
+
+  /* Info row: stack */
+  .info-row {
+    flex-direction: column;
+  }
+
+}

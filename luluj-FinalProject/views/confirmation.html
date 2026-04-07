@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/tickets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <a href="../index.html"><img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="400"></a>
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Visit Us</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="membership.html">Membership</a>
+        <a href="tickets.html" class="cta">Buy Tickets</a>
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <main class="main">
+        <section class="confirmation-section">
+            <h2>Order Confirmed!</h2>
+            <p class="confirmation-message">Thank you for your purchase. Your tickets have been reserved. A confirmation email will be sent to the address provided.</p>
+
+            <div class="confirmation-details">
+                <div class="detail-row">
+                    <span class="detail-label">Name</span>
+                    <span class="detail-value" id="confName"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Email</span>
+                    <span class="detail-value" id="confEmail"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Visit Date</span>
+                    <span class="detail-value" id="confDate"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Ticket Type</span>
+                    <span class="detail-value" id="confTicketType"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Quantity</span>
+                    <span class="detail-value" id="confQuantity"></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Mailing List</span>
+                    <span class="detail-value" id="confMailingList"></span>
+                </div>
+                <div class="detail-row total-row">
+                    <span class="detail-label">Total Cost</span>
+                    <span class="detail-value" id="confTotal"></span>
+                </div>
+            </div>
+
+            <a href="tickets.html" class="submit-btn" style="display:inline-block; text-decoration:none; margin-top:30px;">Buy More Tickets</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var params = new URLSearchParams(window.location.search);
+
+        document.getElementById("confName").textContent = params.get("name") || "—";
+        document.getElementById("confEmail").textContent = params.get("email") || "—";
+        document.getElementById("confDate").textContent = params.get("date") || "—";
+        document.getElementById("confTicketType").textContent = params.get("ticketType") || "—";
+        document.getElementById("confQuantity").textContent = params.get("quantity") || "—";
+        document.getElementById("confMailingList").textContent = params.get("mailingList") || "No";
+        document.getElementById("confTotal").textContent = "$" + (params.get("total") || "0.00");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+/* Tickets & Confirmation Page Styles */
+
+
+/* Table Styles */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid rgba(232, 230, 222, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  padding: 12px;
+  width: fit-content;
+  background-color: #e8e6de;
+  color: #262624;
+  font-weight: 400;
+  font-size: 12px;
+  border: 1px solid rgba(232, 230, 222, 0.1);
+}
+
+td {
+  padding: 10px 12px;
+  border: 1px solid rgba(232, 230, 222, 0.1);
+}
+
+tr:nth-child(even) {
+  background-color: #2e2e2b;
+}
+
+tr:hover {
+  background-color: #343430;
+}
+
+
+/* Ticket Sections */
+
+.ticket-section {
+  margin-bottom: 50px;
+}
+
+.tables-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.tables-row .ticket-section {
+  flex: 1 1 0;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+
+/* Purchase Tickets */
+
+.purchase-form-section {
+  display: none;
+  margin-top: 50px;
+  padding-top: 40px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+
+.purchase-form-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  border-top: 1px solid rgba(232, 230, 222, 0.12);
+}
+
+.purchase-form-section .form-wrapper {
+  text-align: left;
+}
+
+.purchase-form-section .submit-btn {
+  align-self: center;
+}
+
+.selected-date-display {
+  color: #c9a94f;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+
+/* Calendar Date Styles */
+
+#scheduleTable td,
+#scheduleTable td span,
+#scheduleTable th span {
+  border: none;
+}
+
+#scheduleTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#scheduleTable th {
+  text-align: center;
+}
+
+.cal-arrow {
+  cursor: pointer;
+  padding: 2px 10px;
+  font-size: 14px;
+  color: #9b9890;
+  background-color: transparent;
+}
+
+.cal-arrow:hover {
+  color: #c9a94f;
+}
+
+.date {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.date:hover {
+  background-color: #c9a94f;
+  color: #262624;
+}
+
+.date.passed {
+  text-decoration: line-through;
+  color: #6b6a65;
+  cursor: not-allowed;
+}
+
+.date.passed:hover {
+  background-color: transparent;
+  color: #6b6a65;
+}
+
+
+/* Confirmation Page */
+
+.confirmation-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.confirmation-message {
+  color: #c9a94f;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.confirmation-details {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(232, 230, 222, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(232, 230, 222, 0.08);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #9b9890;
+}
+
+.detail-value {
+  font-size: 14px;
+}
+
+.total-row .detail-value {
+  color: #c9a94f;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+/* Tickets (Mobile) */
+
+@media only screen and (max-width: 768px) {
+
+  /* Tables: scrollable horizontally */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  /* Side-by-side tables stack vertically */
+  .tables-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tables-row .ticket-section:first-child,
+  .tables-row .ticket-section:last-child {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .ticket-section {
+    text-align: center;
+  }
+}

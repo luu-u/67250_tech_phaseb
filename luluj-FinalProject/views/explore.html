@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Us | MonoMuse</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+<div class="container explore-layout">
+
+    <header class="header">
+        <a href="../index.html"><img src="../static/monomuse_logo.png" alt="MonoMuse Logo" width="400"></a>
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Visit Us</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="membership.html">Membership</a>
+        <a href="tickets.html" class="cta">Buy Tickets</a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <main class="main">
+        <div class="explore-content">
+            <h2>Visit Us</h2>
+
+            <div class="info-row">
+                <div class="info-card">
+                    <h3>Hours</h3>
+                    <p>Monday – Friday: 10 AM – 6 PM</p>
+                    <p>Saturday: 10 AM – 8 PM</p>
+                    <p>Sunday: 12 PM – 5 PM</p>
+                </div>
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <p>MonoMuse Museum</p>
+                    <p>5000 Forbes Ave</p>
+                    <p>Pittsburgh, PA 15213</p>
+                </div>
+                <div class="info-card">
+                    <h3>Contact</h3>
+                    <p>Phone: (412) 555-0192</p>
+                    <p>Email: info@monomuse.org</p>
+                </div>
+            </div>
+
+            <p>Find MonoMuse on the map below.</p>
+            <div id="map"></div>
+
+            <h3 style="margin-top: 30px;">Arriving Here</h3>
+
+            <div class="info-row">
+                <div class="info-card">
+                    <h3>Parking</h3>
+                    <p>On-site garage available at 5000 Forbes Ave.</p>
+                    <p>Rates: $5/hour, $15 daily max</p>
+                    <p>Free parking on weekends after 4 PM</p>
+                </div>
+                <div class="info-card">
+                    <h3>Public Transit</h3>
+                    <p>Bus routes 61A, 61B, 61C, and 71B stop nearby.</p>
+                    <p>Nearest stop: Forbes &amp; Craig</p>
+                    <p>Light rail: Steel Plaza station (10 min walk)</p>
+                </div>
+                <div class="info-card">
+                    <h3>Accessibility</h3>
+                    <p>Wheelchair accessible entrances on all levels.</p>
+                    <p>Elevators available throughout the building.</p>
+                    <p>Accessible restrooms on every floor.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

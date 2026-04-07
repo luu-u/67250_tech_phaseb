@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your name">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="./static/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script defer src="./static/script.js"></script>
+</head>
+<body onload="addYear()">
+<div class="container">
+
+    <header class="header">
+        <a href="index.html"><img src="./static/monomuse_logo.png" alt="MonoMuse Logo" width="400"></a>
+    </header>
+
+    <nav class="nav_bar">
+        <a href="index.html">Home</a>
+        <a href="views/explore.html">Visit Us</a>
+        <a href="views/exhibitions.html">Exhibitions</a>
+        <a href="views/membership.html">Membership</a>
+        <a href="views/tickets.html" class="cta">Buy Tickets</a>
+        <!-- <a href="views/checkout.html">Checkout</a> -->
+        <a href="javascript:void(0);" class="hamburger" onclick="toggleMenu()">&#9776;</a>
+    </nav>
+
+    <div class="hero-banner">
+        <img src="./static/banner.jpg" alt="Fashion banner">
+        <!--img source: https://www.instagram.com/p/DTwb4K5Dpcs/-->
+        <div class="hero-text">Explore the world of fashion</div>
+    </div>
+
+    <main class="main">
+        <h2 id="greeting">Welcome to the MonoMuse Museum</h2>
+
+        <p id="shortIntro">
+            MonoMuse is a contemporary fashion museum dedicated to exploring 
+            the art, history, and future of clothing. Blending design, culture, 
+            and technology, MonoMuse showcases how fashion shapes identity, 
+            challenges norms, and reflects the world around us.
+        </p>
+
+        <p id="longIntro">
+            From iconic garments and emerging designers to interactive digital 
+            installations, the museum offers an immersive experience that goes 
+            beyond traditional displays. Visitors can engage with fashion as 
+            both an artistic medium and a cultural narrative, whether walking 
+            through our physical galleries or exploring online. Designed for 
+            both first-time guests and returning visitors, MonoMuse makes it 
+            easy to discover exhibitions, plan your visit, and connect with 
+            fashion in new and meaningful ways.
+        </p>
+
+        <span id="readMore">Read More</span>
+        <span id="readLess">Read Less</span>
+
+        <!-- Interactive slideshow gallery (uses jQuery) -->
+        <div class="slideshow">
+            <img src="./static/pic1.jpg" alt="Gallery image 1" class="slide active">
+            <!--img source: https://www.instagram.com/p/DRCju9XCEgm/-->
+            <img src="./static/pic2.jpg" alt="Gallery image 2" class="slide">
+            <!--img source: https://www.postcard.inc/places/nordiska-museet-stockholm?userId=google-->
+            <img src="./static/pic3.jpg" alt="Gallery image 3" class="slide">
+            <!--img source: https://www.instagram.com/p/DHb4K3NIHWm/-->
+            <span class="slide-arrow slide-prev">&#9664;</span>
+            <span class="slide-arrow slide-next">&#9654;</span>
+            <div class="slide-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <h3>Mission Statement</h3>
+        <p>
+            MonoMuse is a contemporary fashion museum dedicated to exploring
+            the art, history, and future of clothing. Blending design, culture,
+            and technology, MonoMuse showcases how fashion shapes identity,
+            challenges norms, and reflects the world around us.
+        </p>
+
+
+        <div class="video-feature-row">
+            <div class="video-container">
+                <iframe
+                width="560" height="315"
+                src="https://www.youtube.com/embed/wdN4y-dKcz0?si=JEKK-ShAjMX1cOyK"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+
+            <div class="video-feature-text">
+                <h3>Recent Event</h3>
+                <p>
+                    Relive the highlights from our latest exhibition opening night,
+                    featuring live talks, exclusive previews, and behind-the-scenes
+                    moments with the designers who are redefining modern fashion.
+                </p>
+                <div class="video-feature-buttons">
+                    <a href="views/exhibitions.html" class="buy-tickets-btn">Explore Exhibitions</a>
+                    <a href="views/tickets.html" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+
+</div>
+</body>
+</html>

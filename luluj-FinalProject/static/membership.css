@@ -1,0 +1,121 @@
+/* Membership & Donate Page */
+
+
+/* Membership Intro */
+
+.membership-intro {
+  margin-bottom: 40px;
+}
+
+
+/* Membership Grid */
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.membership-card {
+  border: 1px solid rgba(232, 230, 222, 0.15);
+  border-radius: 10px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.membership-card.selected {
+  border-color: #c9a94f;
+}
+
+.membership-card h3 {
+  color: #c9a94f;
+}
+
+.membership-price {
+  font-family: 'Lora', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #e8e6de !important;
+  padding: 0 !important;
+}
+
+.membership-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  display: block;
+}
+
+.membership-card li {
+  margin-bottom: 6px;
+}
+
+.membership-actions-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(232, 230, 222, 0.12);
+}
+
+.membership-form-section {
+  flex: 1;
+}
+
+
+/* Donation */
+
+.donation-section {
+  flex: 1;
+}
+
+.donation-options {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0 30px;
+}
+
+.donation-btn {
+  padding: 12px 28px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid rgba(232, 230, 222, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.donation-btn:hover,
+.donation-btn.selected {
+  background-color: #c9a94f;
+  color: #262624;
+  border-color: #c9a94f;
+}
+
+
+/* Membership (Mobile) */
+
+@media only screen and (max-width: 768px) {
+
+  /* Single column on mobile */
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack join + donate vertically */
+  .membership-actions-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .donation-options {
+    flex-wrap: wrap;
+  }
+}
